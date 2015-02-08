@@ -11,7 +11,7 @@ set :fonts_dir, 'assets/fonts'
 set :layout, 'layouts/application'
 
 configure :development do
- activate :livereload
+  activate :livereload
 end
 
 configure :build do
