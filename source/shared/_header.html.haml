@@ -1,24 +1,17 @@
 %header.navigation{:role => "banner"}
   .navigation-wrapper
-    %a.logo{:href => "javascript:void(0)"}
-      %img{:alt => "Logo Image", :src => "assets/images/h4h-logo.png"}/
+    %a.logo{:href => "/"}
+      = image_tag 'h4h-logo.png', :alt => 'Logo Image'
     %a#js-mobile-menu.navigation-menu-button{:href => "javascript:void(0)"} MENU
     %nav{:role => "navigation"}
       %ul#js-navigation-menu.navigation-menu.show
         %li.nav-link
-          %a{:href => "javascript:void(0)"} About
+          %a{:href => "/about"} About
         %li.nav-link
-          %a{:href => "javascript:void(0)"} Events
+          %a{:href => "/events"} Events
         %li.nav-link
-          %a{:href => "javascript:void(0)"} Training
+          %a{:href => "/training"} Training
         %li.nav-link
-          %a{:href => "javascript:void(0)"} Blog
+          %a{:href => "/blog"} Blog
         %li.nav-link
-          %a{:href => "javascript:void(0)"} Contact
-    -# .navigation-tools
-    -#   .search-bar
-    -#     %form{:role => "search"}
-    -#       %input{:placeholder => "Enter Search", :type => "search"}/
-    -#       %button{:type => "submit"}
-    -#         %img{:alt => "Search Icon", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png"}/
-    -#   %a.sign-up{:href => "javascript:void(0)"} Sign Up
+          %a{:href => "/contact-us"} Contact
