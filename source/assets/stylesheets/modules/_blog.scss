@@ -1,0 +1,19 @@
+// Blog section
+.blog {
+  section {
+    &.main {
+      @include outer-container;
+      padding: 3em 0;
+      // margin: 0 25px;
+
+      #blog-content {
+        @include span-columns(9);
+      }
+
+      aside#blog-sidebar {
+        @include span-columns(3);
+        @include omega();
+      }
+    }
+  }
+}

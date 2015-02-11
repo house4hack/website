@@ -4,12 +4,21 @@
     %meta{charset: "utf-8"}
     %meta{content: "IE=edge,chrome=1", http: {equiv: "X-UA-Compatible"}}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
-    %title= current_page.data.title || "House 4 Hack - What will you build next?"
+    %title
+      - if current_page.data.title == "Home"
+        = "House 4 Hack - What will you build next?"
+      - else
+        = "#{current_page.data.title} | House4Hack"
     = stylesheet_link_tag "application"
-    %link{:href => 'http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext', :rel => 'stylesheet', :type => 'text/css'}
+    -# %link{:href => 'http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext', :rel => 'stylesheet', :type => 'text/css'}
+    %link{:href => 'http://fonts.googleapis.com/css?family=Open+Sans:400,700,300', :rel => 'stylesheet', :type => 'text/css'}
 
   %body{class: page_classes}
-    = partial "shared/header"
+    %header.navigation{:role => "banner"}
+      = partial "shared/header"
+    - unless current_page.data.title == "Home"
+      = partial "shared/page_header"
     = yield
-    = partial "shared/footer"
+    %footer.footer{:role => "contentinfo"}
+      = partial "shared/footer"
     = javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js", "application"

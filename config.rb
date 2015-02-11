@@ -24,11 +24,12 @@ activate :blog do |blog|
   blog.permalink = "{title}.html"
   blog.layout = "layouts/blog"
 
+  # Matcher for blog source files
+  blog.sources = "posts/{year}-{month}-{day}-{title}.html"
+
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
 
-  # Matcher for blog source files
-  # blog.sources = "{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
